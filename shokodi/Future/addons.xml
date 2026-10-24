@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addons>
+	<addon id="plugin.video.shokodi" name="Shokodi" version="3.6.125" provider-name="da3dsoul">
+		<requires>
+			<import addon="xbmc.python" version="3.0.0" />
+			<import addon="script.module.web-pdb" optional="true"/>
+		</requires>
+		<extension point="xbmc.python.pluginsource" library="shokodiplugin.py">
+			<provides>video</provides>
+		</extension>
+		<extension point="xbmc.python.script" library="shokodiscript.py">
+			<provides>executable</provides>
+		</extension>
+		<extension point="xbmc.addon.metadata">
+			<summary lang="en_GB">Shokodi is an official Kodi plugin for Shoko.</summary>
+			<description lang="en_GB">Shokodi was designed with one thing in mind: watching anime. It does not have many features, but they should all work.</description>
+			<disclaimer lang="en_GB">This plugin requires Shoko to work. It does not stream or download anime for you</disclaimer>
+			<news>Fix several bugs and ensure deprecations are handled for the future</news>
+			<platform>all</platform>
+			<language>en</language>
+			<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+			<forum>https://discordapp.com/invite/vpeHDsg</forum>
+			<website>https://shokoanime.com</website>
+			<source>https://github.com/shokoanime/shokodi</source>
+			<email></email>
+			<assets>
+				<icon>resources/icon.png</icon>
+			</assets>
+		</extension>
+	</addon>
+	<addon id="repository.shokodi" name="Shokodi Repository" version="2.1.0" provider-name="da3dsoul">
+		<extension point="xbmc.addon.repository" name="Shokodi Repository">
+			<dir maxversion="18.9.0">
+				<info compressed="false">https://shokoanime.github.io/shokodi/Legacy/addons.xml</info>
+				<checksum>https://shokoanime.github.io/shokodi/Legacy/addons.xml.md5</checksum>
+				<datadir zip="true">https://shokoanime.github.io/shokodi/Legacy</datadir>
+				<hashes>false</hashes>
+			</dir>
+			<dir minversion="19.0.0">
+				<info compressed="false">https://shokoanime.github.io/shokodi/Future/addons.xml</info>
+				<checksum>https://shokoanime.github.io/shokodi/Future/addons.xml.md5</checksum>
+				<datadir zip="true">https://shokoanime.github.io/shokodi/Future</datadir>
+				<hashes>false</hashes>
+			</dir>
+		</extension>
+		<extension point="xbmc.addon.metadata">
+			<summary>Shokodi</summary>
+			<description>This Repo contains Shokodi. The goal is to have fewer features that always work with any version.</description>
+			<disclaimer>The owner and submitters to this repository do not host or distribute any of the content displayed by these addons nor do they have any affiliation with the content providers.</disclaimer>
+			<platform>all</platform>
+		</extension>
+	</addon>
+	<addon id="script.module.routing" name="Plugin routing" version="0.2.5.0" provider-name="takoi">
+	    <requires>
+	        <import addon="xbmc.python" version="3.0.0"/>
+	    </requires>
+	    <extension point="xbmc.python.module" library="lib" />
+	    <extension point="xbmc.addon.metadata">
+	        <summary lang="en">Routing module for plugins</summary>
+	        <description lang="en">Library for building and parsing plugin URLs.
+
+	Documentation: https://github.com/tamland/kodi-plugin-routing</description>
+	        <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+	        <platform>all</platform>
+	        <source>https://github.com/tamland/kodi-plugin-routing</source>
+	    </extension>
+	</addon>
+</addons>
